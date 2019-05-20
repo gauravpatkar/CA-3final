@@ -1,4 +1,4 @@
-
+getwd()
 # Importing Environment Pollution dataset
 
 environment_problem_df <- read.csv("D:/data science/New folder/gases.csv", header = TRUE)
@@ -156,7 +156,7 @@ rainfall.and.environment.t.test$estimate
 rainfall.and.environment.t.test$conf.int
 attr(rainfall.and.environment.t.test$conf.int, "conf.level")
 
-#calculating 
+#calculating mean and sd 
 mean1 <- mean(rainfall_and_environment_df$Total_Emission)
 mean1
 mean2 <- mean(rainfall_and_environment_df$Rainfall_Readings)
@@ -169,7 +169,9 @@ avg = (sd1 + sd2)/2
 delta1 = (mean1 - mean2)/avg
 delta1
 
+#calculating n sample 
 library(pwr)
 power.t.test(delta = 22.64, n = NULL, sig.level = 0.05, power = 0.90,type= "two.sample", alternative = "two.sided")
+
 
 
